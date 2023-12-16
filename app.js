@@ -53,6 +53,7 @@ listContainer.addEventListener("click", function(e){
     {
         e.target.classList.toggle("checked");
         savedata();
+
     }
     else if(e.target.tagName === "SPAN")
     {
@@ -80,15 +81,18 @@ async function getData()
     const querySnapshot = await getDocs(collection(db, "listitems"));
     querySnapshot.forEach(function(doc)
     {
-        listContainer.innerHTML= doc.data().listitems;  
+        listContainer.innerHTML= doc.data().listitems;
+
     })
 }
-function showtasks()
-{
+
+getData();
+// function showtasks()
+// {
     
-    listContainer.innerHTML= localStorage.getItem("listContainer");
-}
-showtasks();
+//     listContainer.innerHTML= localStorage.getItem("listContainer");
+// }
+// showtasks();
 
 
 
