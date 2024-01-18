@@ -1,3 +1,4 @@
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 
 import {
@@ -10,8 +11,8 @@ import {
   updateDoc,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
+ 
+const firebaseConfig = {
     apiKey: "AIzaSyDhfyfSB3SY5lraLVu_mi-qmOc3AuDhK6w",
     authDomain: "to-do-list-10ba8.firebaseapp.com",
     projectId: "to-do-list-10ba8",
@@ -23,19 +24,6 @@ import {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
-  console.log(db);
-  console.log(app);
-// function showtasks()
-// {
-    
-//     listContainer.innerHTML= localStorage.getItem("listContainer");
-// }
-// showtasks();
-
-
-
-
-
 
 
 const input = document.getElementById('input');
